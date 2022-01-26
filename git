@@ -1,0 +1,15 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	name = Skripko Ivan
+	email = skripko_02@bk.ru
+[alias]
+	flow-feature-start = !git checkout develop && git branch feature && git checkout feature
+	flow-feature-finish = !git checkout develop && git merge feature && git branch -d feature
+	flow-release-start = !git checkout develop && git branch release && git checkout release
+	flow-release-finish = !git checkout master && git merge release && git checkout develop && git merge release && git branch -d release && git checkout master
+	flow-hotfix-start = !git checkout master && git branch hotfix && git checkout hotfix
+	flow-hotfix-finish = !git checkout master && git merge hotfix && git checkout develop && git merge hotfix && git branch -d hotfix
