@@ -4,7 +4,7 @@
 	a) Для создания ветки feature используйте следующую команду:
 		git flow-feature-start
 	б) После окончания работы с веткой feature используйте следующую команду:
-		git fow-feature-finish
+		git flow-feature-finish
 3) Работа с веткой release
 	а) Для создания ветки release используйте следующую коману:
 		git flow-release-start
